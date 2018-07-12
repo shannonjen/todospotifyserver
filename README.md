@@ -51,3 +51,6 @@ $ heroku addons:create heroku-postgresql:hobby-dev
 $ heroku run knex migrate:latest
 ```
 11. Run seeds
+```
+$ heroku run knex seed:run
+```
