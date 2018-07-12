@@ -28,8 +28,26 @@ var client_secret = process.env.CLIENT_SECRET;
 ```
 "heroku-postbuild": "npm install --production"
 ```
-6. Log into heroku
+6. Log into heroku via heroku CLI
 ```
 $ heroku login
 ```
-7. 
+7. Create heroku app
+```
+$ heroku create
+```
+8. Commit changes and push to heroku
+```
+$ git add .
+$ git commit -m "Configure for Heroku"
+$ git push heroku master
+```
+9. Set up database
+```
+$ heroku addons:create heroku-postgresql:hobby-dev
+```
+10. Run migrations
+```
+$ heroku run knex migrate:latest
+```
+11. Run seeds
