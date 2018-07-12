@@ -8,8 +8,10 @@ var querystring = require('querystring');
 var request = require('request');
 var cors = require('cors')
 
-var client_id = 'e6228ce548234d22bf726fb503c44397';
-var client_secret = '05502810df0d462e90c3711c7b19362b';
+require('dotenv').config
+
+var client_id = process.env.CLIENT_ID;
+var client_secret = process.env.CLIENT_SECRET;
 var redirect_uri = 'http://localhost:3001/callback'
 
 var index = require('./routes/index');
